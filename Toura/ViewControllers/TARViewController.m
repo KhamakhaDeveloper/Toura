@@ -75,7 +75,7 @@
 
 - (void)addImageNode:(ARImageTrackable *)imageTrackable {
     // Initialise image node
-    ARImageNode *imageNode = [[ARImageNode alloc] initWithBundledFile:@"eyebrow.png"];
+    ARImageNode *imageNode = [[ARImageNode alloc] initWithBundledFile:@"uniInfo.png"];
     
     // Add image node to image trackable
     [imageTrackable.world addChild:imageNode];
