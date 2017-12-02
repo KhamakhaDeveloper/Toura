@@ -17,6 +17,13 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    UIApplication.sharedApplication.statusBarStyle = UIStatusBarStyleLightContent;
+    self.apiAI = [[ApiAI alloc] init];
+    // Define API.AI configuration here.
+    id <AIConfiguration> configuration = [[AIDefaultConfiguration alloc] init];
+    configuration.clientAccessToken = @"b333d41eab8d4683bf564cc6b96171ec";
+    self.apiAI.configuration = configuration;
+    
     return YES;
 }
 

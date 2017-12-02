@@ -13,6 +13,11 @@
 		3A21F64E1FD2605B00D89F25 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A21F64D1FD2605B00D89F25 /* Assets.xcassets */; };
 		3A21F6511FD2605B00D89F25 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A21F64F1FD2605B00D89F25 /* LaunchScreen.storyboard */; };
 		3A21F6541FD2605B00D89F25 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A21F6531FD2605B00D89F25 /* main.m */; };
+		3A5FE5361FD27E74005079E8 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5FE5351FD27E74005079E8 /* LoginViewController.swift */; };
+		3A5FE5381FD2864E005079E8 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5FE5371FD2864E005079E8 /* Extensions.swift */; };
+		3A5FE53B1FD28F39005079E8 /* PulseAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5FE53A1FD28F39005079E8 /* PulseAnimation.swift */; };
+		3A5FE53D1FD290CE005079E8 /* SimpleChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5FE53C1FD290CE005079E8 /* SimpleChat.swift */; };
+		3A5FE53F1FD2911A005079E8 /* TouraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5FE53E1FD2911A005079E8 /* TouraViewController.swift */; };
 		65409B51B64E1AB2A01D7FA5 /* Pods_Toura.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 244337CCAA66B797AB241C00 /* Pods_Toura.framework */; };
 		FB1795F21FD270A2003E9BDD /* KudanAR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB1795F11FD270A2003E9BDD /* KudanAR.framework */; };
 		FB1795FB1FD2719A003E9BDD /* TARViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB1795FA1FD27199003E9BDD /* TARViewController.m */; };
@@ -35,6 +40,11 @@
 		3A21F6521FD2605B00D89F25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3A21F6531FD2605B00D89F25 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3A3A04381FD2651700E51BE8 /* Toura-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Toura-Bridging-Header.h"; sourceTree = "<group>"; };
+		3A5FE5351FD27E74005079E8 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		3A5FE5371FD2864E005079E8 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		3A5FE53A1FD28F39005079E8 /* PulseAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PulseAnimation.swift; sourceTree = "<group>"; };
+		3A5FE53C1FD290CE005079E8 /* SimpleChat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleChat.swift; sourceTree = "<group>"; };
+		3A5FE53E1FD2911A005079E8 /* TouraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouraViewController.swift; sourceTree = "<group>"; };
 		EC21ECC610B16C2403ED440D /* Pods-Toura.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Toura.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Toura/Pods-Toura.debug.xcconfig"; sourceTree = "<group>"; };
 		FB1795F11FD270A2003E9BDD /* KudanAR.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = KudanAR.framework; sourceTree = "<group>"; };
 		FB1795F91FD27199003E9BDD /* TARViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TARViewController.h; sourceTree = "<group>"; };
@@ -90,6 +100,7 @@
 				3A21F6471FD2605B00D89F25 /* ViewController.h */,
 				3A21F6481FD2605B00D89F25 /* ViewController.m */,
 				3A21F64A1FD2605B00D89F25 /* Main.storyboard */,
+				3A5FE5391FD28F19005079E8 /* SwiftFiles */,
 				3A21F64D1FD2605B00D89F25 /* Assets.xcassets */,
 				3A21F64F1FD2605B00D89F25 /* LaunchScreen.storyboard */,
 				3A21F6521FD2605B00D89F25 /* Info.plist */,
@@ -97,6 +108,18 @@
 				3A3A04381FD2651700E51BE8 /* Toura-Bridging-Header.h */,
 			);
 			path = Toura;
+			sourceTree = "<group>";
+		};
+		3A5FE5391FD28F19005079E8 /* SwiftFiles */ = {
+			isa = PBXGroup;
+			children = (
+				3A5FE5351FD27E74005079E8 /* LoginViewController.swift */,
+				3A5FE53A1FD28F39005079E8 /* PulseAnimation.swift */,
+				3A5FE5371FD2864E005079E8 /* Extensions.swift */,
+				3A5FE53C1FD290CE005079E8 /* SimpleChat.swift */,
+				3A5FE53E1FD2911A005079E8 /* TouraViewController.swift */,
+			);
+			name = SwiftFiles;
 			sourceTree = "<group>";
 		};
 		7201762B5B639F943A641B63 /* Pods */ = {
@@ -262,9 +285,14 @@
 			files = (
 				FB1795FB1FD2719A003E9BDD /* TARViewController.m in Sources */,
 				FBD40ECA1FD28D84006BCE4C /* TrackerSetup.m in Sources */,
+				3A5FE5381FD2864E005079E8 /* Extensions.swift in Sources */,
 				3A21F6491FD2605B00D89F25 /* ViewController.m in Sources */,
 				3A21F6541FD2605B00D89F25 /* main.m in Sources */,
+				3A5FE5361FD27E74005079E8 /* LoginViewController.swift in Sources */,
+				3A5FE53B1FD28F39005079E8 /* PulseAnimation.swift in Sources */,
 				3A21F6461FD2605B00D89F25 /* AppDelegate.m in Sources */,
+				3A5FE53F1FD2911A005079E8 /* TouraViewController.swift in Sources */,
+				3A5FE53D1FD290CE005079E8 /* SimpleChat.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
