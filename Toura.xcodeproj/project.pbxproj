@@ -24,6 +24,14 @@
 		FBD40ED31FD29FBD006BCE4C /* Overlay.png in Resources */ = {isa = PBXBuildFile; fileRef = FBD40ED01FD29FBD006BCE4C /* Overlay.png */; };
 		FBD40ED41FD29FBD006BCE4C /* Overlay@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FBD40ED11FD29FBD006BCE4C /* Overlay@2x.png */; };
 		FBD40ED51FD29FBD006BCE4C /* Overlay@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = FBD40ED21FD29FBD006BCE4C /* Overlay@3x.png */; };
+		FBD40EDA1FD2BE69006BCE4C /* fortTexture.png in Resources */ = {isa = PBXBuildFile; fileRef = FBD40ED91FD2BE68006BCE4C /* fortTexture.png */; };
+		FBD40EDC1FD2BE8D006BCE4C /* Castle.armodel in Resources */ = {isa = PBXBuildFile; fileRef = FBD40EDB1FD2BE8D006BCE4C /* Castle.armodel */; };
+		FBD40EDE1FD2BEC6006BCE4C /* fort.png in Resources */ = {isa = PBXBuildFile; fileRef = FBD40EDD1FD2BEC6006BCE4C /* fort.png */; };
+		FBD40EDF1FD2BEFE006BCE4C /* KudanAR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB1795F11FD270A2003E9BDD /* KudanAR.framework */; };
+		FBD40EE01FD2BF71006BCE4C /* TrackerSetup.m in Sources */ = {isa = PBXBuildFile; fileRef = FBD40EC91FD28D84006BCE4C /* TrackerSetup.m */; };
+		FBD40EE11FD2BF80006BCE4C /* TARViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB1795FA1FD27199003E9BDD /* TARViewController.m */; };
+		FBD40EE21FD2BF87006BCE4C /* MarkerInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBD40ED61FD2A29C006BCE4C /* MarkerInfoViewController.m */; };
+		FBD40EE41FD2C29F006BCE4C /* texture.png in Resources */ = {isa = PBXBuildFile; fileRef = FBD40EE31FD2C29F006BCE4C /* texture.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +67,10 @@
 		FBD40ED21FD29FBD006BCE4C /* Overlay@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Overlay@3x.png"; sourceTree = "<group>"; };
 		FBD40ED61FD2A29C006BCE4C /* MarkerInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MarkerInfoViewController.m; sourceTree = "<group>"; };
 		FBD40ED71FD2A29C006BCE4C /* MarkerInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MarkerInfoViewController.h; sourceTree = "<group>"; };
+		FBD40ED91FD2BE68006BCE4C /* fortTexture.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fortTexture.png; sourceTree = "<group>"; };
+		FBD40EDB1FD2BE8D006BCE4C /* Castle.armodel */ = {isa = PBXFileReference; lastKnownFileType = file; path = Castle.armodel; sourceTree = "<group>"; };
+		FBD40EDD1FD2BEC6006BCE4C /* fort.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fort.png; sourceTree = "<group>"; };
+		FBD40EE31FD2C29F006BCE4C /* texture.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = texture.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FBD40EDF1FD2BEFE006BCE4C /* KudanAR.framework in Frameworks */,
 				FB1795FD1FD27393003E9BDD /* libc++.tbd in Frameworks */,
 				65409B51B64E1AB2A01D7FA5 /* Pods_Toura.framework in Frameworks */,
 			);
@@ -172,6 +185,10 @@
 				FBD40ED01FD29FBD006BCE4C /* Overlay.png */,
 				FBD40ED11FD29FBD006BCE4C /* Overlay@2x.png */,
 				FBD40ED21FD29FBD006BCE4C /* Overlay@3x.png */,
+				FBD40ED91FD2BE68006BCE4C /* fortTexture.png */,
+				FBD40EE31FD2C29F006BCE4C /* texture.png */,
+				FBD40EDD1FD2BEC6006BCE4C /* fort.png */,
+				FBD40EDB1FD2BE8D006BCE4C /* Castle.armodel */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -238,12 +255,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FBD40EE41FD2C29F006BCE4C /* texture.png in Resources */,
 				3A21F6511FD2605B00D89F25 /* LaunchScreen.storyboard in Resources */,
 				FBD40ED31FD29FBD006BCE4C /* Overlay.png in Resources */,
 				FBD40ECD1FD29206006BCE4C /* udaipur.KARMarker in Resources */,
 				3A21F64E1FD2605B00D89F25 /* Assets.xcassets in Resources */,
 				3A21F64C1FD2605B00D89F25 /* Main.storyboard in Resources */,
 				FBD40ED41FD29FBD006BCE4C /* Overlay@2x.png in Resources */,
+				FBD40EDE1FD2BEC6006BCE4C /* fort.png in Resources */,
+				FBD40EDC1FD2BE8D006BCE4C /* Castle.armodel in Resources */,
+				FBD40EDA1FD2BE69006BCE4C /* fortTexture.png in Resources */,
 				FBD40ED51FD29FBD006BCE4C /* Overlay@3x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -303,11 +324,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FBD40EE11FD2BF80006BCE4C /* TARViewController.m in Sources */,
 				3A5FE5381FD2864E005079E8 /* Extensions.swift in Sources */,
 				3A21F6491FD2605B00D89F25 /* ViewController.m in Sources */,
 				3A21F6541FD2605B00D89F25 /* main.m in Sources */,
+				FBD40EE01FD2BF71006BCE4C /* TrackerSetup.m in Sources */,
 				3A5FE5361FD27E74005079E8 /* LoginViewController.swift in Sources */,
 				3A5FE53B1FD28F39005079E8 /* PulseAnimation.swift in Sources */,
+				FBD40EE21FD2BF87006BCE4C /* MarkerInfoViewController.m in Sources */,
 				3A21F6461FD2605B00D89F25 /* AppDelegate.m in Sources */,
 				3A5FE53F1FD2911A005079E8 /* TouraViewController.swift in Sources */,
 				3A5FE53D1FD290CE005079E8 /* SimpleChat.swift in Sources */,

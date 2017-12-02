@@ -13,6 +13,7 @@
 
 @required
 - (void)detectedTrackable:(ARImageTrackable *)imageTrackable;
+- (void)lostTrackable:(ARImageTrackable *)imageTrackable;
 
 @end
 

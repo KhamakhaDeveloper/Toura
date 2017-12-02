@@ -11,9 +11,13 @@
 
 @interface TrackerSetup ()
 
+@property(nonatomic) ARImageTrackerManager *imageTrackerManager;
+
 @end
 
 @implementation TrackerSetup
+
+@synthesize imageTrackerManager;
 
 + (id)sharedManager{
     static TrackerSetup *trackerSetup = nil;
@@ -31,7 +35,7 @@
     ARImageTrackableSet *imageTrackableSet = [[ARImageTrackableSet alloc] initWithPath:filePath];
     
     //Setup TrackerManager
-    ARImageTrackerManager *imageTrackerManager = [ARImageTrackerManager getInstance];
+    imageTrackerManager = [ARImageTrackerManager getInstance];
     [imageTrackerManager initialise];
     [imageTrackerManager toggleParallelDetection:YES];
     [imageTrackerManager setMaximumSimultaneousTracking:10];
@@ -43,10 +47,24 @@
     for (ARImageTrackable *imageTrackable in imageTrackableSet.trackables) {
         
         imageTrackable.name = UDAIPUR_MARKER_NAME;
+        [imageTrackable allowRecoveryMode];
         
         [imageTrackable addTrackingEventTarget:self action:@selector(trackerDetected:) forEvent:ARImageTrackableEventDetected];
         [imageTrackable addTrackingEventTarget:self action:@selector(trackerLost:) forEvent:ARImageTrackableEventLost];
     }
+    
+    //3D Model Tracker
+    [self setupFortModelTrackable];
+}
+
+- (void)setupFortModelTrackable {
+    //Setup Single Markers
+    ARImageTrackable *fortModelTrackable = [[ARImageTrackable alloc] initWithImage:[UIImage imageNamed:@"fort.png"] name:@"fortModel"];
+    [imageTrackerManager addTrackable:fortModelTrackable];
+    
+    [fortModelTrackable allowRecoveryMode];
+    [fortModelTrackable addTrackingEventTarget:self action:@selector(trackerDetected:) forEvent:ARImageTrackableEventDetected];
+    [fortModelTrackable addTrackingEventTarget:self action:@selector(trackerLost:) forEvent:ARImageTrackableEventLost];
 }
 
 #pragma mark - Event detection methods
@@ -70,7 +88,7 @@
 }
 
 - (void)trackerLost:(ARImageTrackable *)imageTrackable {
-    
+    [self.delegate lostTrackable:imageTrackable];
 }
 
 /*

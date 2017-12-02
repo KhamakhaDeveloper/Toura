@@ -77,12 +77,41 @@
     
 }
 
-- (void)addModelNode {
+- (void)addModelNode:(ARImageTrackable *)imageTrackable isVisible:(BOOL )isVisible {
     
+    if (isVisible) {
+        // Import the model.
+        ARModelImporter *importer = [[ARModelImporter alloc] initWithBundled:@"Castle.armodel"];
+        
+        // Get a node representing the model's contents.
+        ARModelNode *modelNode = [importer getNode];
+        
+        // Create the model texture from a UIImage.
+        ARTexture *modelTexture = [[ARTexture alloc] initWithUIImage:[UIImage imageNamed:@"texture.png"]];
+        
+        // Create a textured material using the texture.
+        ARTextureMaterial *textureMaterial = [[ARTextureMaterial alloc] initWithTexture:modelTexture];
+        
+        // Assign textureMaterial to every mesh in the model.
+        for (ARMeshNode *meshNode in modelNode.meshNodes) {
+            
+            meshNode.material = textureMaterial;
+        }
+        
+        // Modelled with y-axis up. Marker has z-axis up. Rotate around the x-axis to correct this.
+        [modelNode rotateByDegrees:90 axisX:1 y:0 z:0];
+        [modelNode scaleByUniform:20];
+        
+        // Add the model to a marker.
+        [imageTrackable.world addChild:modelNode];
+        
+        self.modelNode = modelNode;
+    }else {
+        [imageTrackable.world removeChild:self.modelNode];
+    }
 }
 
-- (void)addVideoNode {
-    
+- (void)addVideoNode:(ARImageTrackable *)imageTrackable {
 }
 
 - (void)addSignConversionNode {
@@ -102,6 +131,16 @@
 - (void)detectedTrackable:(ARImageTrackable *)imageTrackable {
     if ([imageTrackable.name isEqualToString:UDAIPUR_MARKER_NAME]) {
         [self showMarkerInfo:imageTrackable];
+    }else if ([imageTrackable.name isEqualToString:@"fortModel"]){
+        [self addModelNode:imageTrackable isVisible:YES];
+    }
+}
+
+- (void)lostTrackable:(ARImageTrackable *)imageTrackable {
+    if ([imageTrackable.name isEqualToString:UDAIPUR_MARKER_NAME]) {
+        [self showMarkerInfo:imageTrackable];
+    }else if ([imageTrackable.name isEqualToString:@"fortModel"]){
+        [self addModelNode:imageTrackable isVisible:NO];
     }
 }
 
