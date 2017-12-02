@@ -213,7 +213,6 @@ class ChatMessageCell : UITableViewCell {
     }
     
     func setupWithMessage(_ message: ChatMessage) -> CGSize {
-        if urlDetector(text: message.content)
         textView.text = message.content
         size = textView.sizeThatFits(maxSize)
         if size.height < minimumHeight {
