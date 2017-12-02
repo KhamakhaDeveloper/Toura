@@ -84,7 +84,7 @@
 
 - (void)setupLiveTrackable {
     //Setup Single Markers
-    ARImageTrackable *fortModelTrackable = [[ARImageTrackable alloc] initWithImage:[UIImage imageNamed:@"uniMarker.JPG"] name:@"uniMarker"];
+    ARImageTrackable *fortModelTrackable = [[ARImageTrackable alloc] initWithImage:[UIImage imageNamed:@"vasundhara.JPG"] name:@"vasundhara"];
     [imageTrackerManager addTrackable:fortModelTrackable];
     
     [fortModelTrackable allowRecoveryMode];

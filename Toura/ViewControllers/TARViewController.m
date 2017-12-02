@@ -75,7 +75,7 @@
 
 - (void)addImageNode:(ARImageTrackable *)imageTrackable {
     // Initialise image node
-    ARImageNode *imageNode = [[ARImageNode alloc] initWithBundledFile:@"uniInfo.png"];
+    ARImageNode *imageNode = [[ARImageNode alloc] initWithBundledFile:@"VR_1.png"];
     
     // Add image node to image trackable
     [imageTrackable.world addChild:imageNode];
@@ -161,9 +161,9 @@
         [self showMarkerInfo:imageTrackable];
     }else if ([imageTrackable.name isEqualToString:@"fortModel"]){
         [self addModelNode:imageTrackable isVisible:YES];
-    }else if ([imageTrackable.name isEqualToString:@"hawaMahal"]){
+    }else if ([imageTrackable.name isEqualToString:@"hawamahal"]){
         [self addVideoNode:imageTrackable isVisible:YES];
-    }else if ([imageTrackable.name isEqualToString:@"uniMarker"]){
+    }else if ([imageTrackable.name isEqualToString:@"vasundhara"]){
         [self addImageNode:imageTrackable];
     }
 }
@@ -173,7 +173,7 @@
         [self showMarkerInfo:imageTrackable];
     }else if ([imageTrackable.name isEqualToString:@"fortModel"]){
         [self addModelNode:imageTrackable isVisible:NO];
-    }else if ([imageTrackable.name isEqualToString:@"hawaMahal"]){
+    }else if ([imageTrackable.name isEqualToString:@"hawamahal"]){
         [self addVideoNode:imageTrackable isVisible:NO];
     }
 }

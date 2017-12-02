@@ -35,7 +35,8 @@
 		FBD40EE61FD2CDB8006BCE4C /* hawaMahal.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = FBD40EE51FD2CDB3006BCE4C /* hawaMahal.mp4 */; };
 		FBD40EE81FD2CE9A006BCE4C /* hawamahal.png in Resources */ = {isa = PBXBuildFile; fileRef = FBD40EE71FD2CE9A006BCE4C /* hawamahal.png */; };
 		FBD40EEA1FD2D69C006BCE4C /* uniMarker.JPG in Resources */ = {isa = PBXBuildFile; fileRef = FBD40EE91FD2D69C006BCE4C /* uniMarker.JPG */; };
-		FBD40EEC1FD2DEA6006BCE4C /* uniInfo.png in Resources */ = {isa = PBXBuildFile; fileRef = FBD40EEB1FD2DEA6006BCE4C /* uniInfo.png */; };
+		FBD40EF01FD2F02C006BCE4C /* vasundhara.JPG in Resources */ = {isa = PBXBuildFile; fileRef = FBD40EEF1FD2F02C006BCE4C /* vasundhara.JPG */; };
+		FBD40EF21FD2F063006BCE4C /* VR_1.png in Resources */ = {isa = PBXBuildFile; fileRef = FBD40EF11FD2F063006BCE4C /* VR_1.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -78,7 +79,8 @@
 		FBD40EE51FD2CDB3006BCE4C /* hawaMahal.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = hawaMahal.mp4; sourceTree = "<group>"; };
 		FBD40EE71FD2CE9A006BCE4C /* hawamahal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hawamahal.png; sourceTree = "<group>"; };
 		FBD40EE91FD2D69C006BCE4C /* uniMarker.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = uniMarker.JPG; sourceTree = "<group>"; };
-		FBD40EEB1FD2DEA6006BCE4C /* uniInfo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = uniInfo.png; sourceTree = "<group>"; };
+		FBD40EEF1FD2F02C006BCE4C /* vasundhara.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = vasundhara.JPG; sourceTree = "<group>"; };
+		FBD40EF11FD2F063006BCE4C /* VR_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = VR_1.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -197,7 +199,8 @@
 				FBD40ED91FD2BE68006BCE4C /* fortTexture.png */,
 				FBD40EE31FD2C29F006BCE4C /* texture.png */,
 				FBD40EE71FD2CE9A006BCE4C /* hawamahal.png */,
-				FBD40EEB1FD2DEA6006BCE4C /* uniInfo.png */,
+				FBD40EEF1FD2F02C006BCE4C /* vasundhara.JPG */,
+				FBD40EF11FD2F063006BCE4C /* VR_1.png */,
 				FBD40EE91FD2D69C006BCE4C /* uniMarker.JPG */,
 				FBD40EDD1FD2BEC6006BCE4C /* fort.png */,
 				FBD40EDB1FD2BE8D006BCE4C /* Castle.armodel */,
@@ -274,13 +277,14 @@
 				FBD40EEA1FD2D69C006BCE4C /* uniMarker.JPG in Resources */,
 				FBD40ECD1FD29206006BCE4C /* udaipur.KARMarker in Resources */,
 				FBD40EE81FD2CE9A006BCE4C /* hawamahal.png in Resources */,
+				FBD40EF21FD2F063006BCE4C /* VR_1.png in Resources */,
 				3A21F64E1FD2605B00D89F25 /* Assets.xcassets in Resources */,
 				3A21F64C1FD2605B00D89F25 /* Main.storyboard in Resources */,
 				FBD40ED41FD29FBD006BCE4C /* Overlay@2x.png in Resources */,
+				FBD40EF01FD2F02C006BCE4C /* vasundhara.JPG in Resources */,
 				FBD40EDE1FD2BEC6006BCE4C /* fort.png in Resources */,
 				FBD40EDC1FD2BE8D006BCE4C /* Castle.armodel in Resources */,
 				FBD40EDA1FD2BE69006BCE4C /* fortTexture.png in Resources */,
-				FBD40EEC1FD2DEA6006BCE4C /* uniInfo.png in Resources */,
 				FBD40ED51FD29FBD006BCE4C /* Overlay@3x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
