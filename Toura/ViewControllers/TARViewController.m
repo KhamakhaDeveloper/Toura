@@ -22,8 +22,47 @@
 @implementation TARViewController
 
 - (void)setupContent {
-    
+    [self setupTracableMarkers];
+    [self setupGestureRecognizers];
 }
+
+#pragma mark - Tracable Markers Method
+
+// Doing it using multiple markers .KARMarker set
+
+- (void)setupTracableMarkers {
+    //Setup imageTrackableSet
+    NSString *filePath = [[[NSBundle mainBundle] resourcePath] stringByAppendingString:@"locations.KARMarker"];
+    ARImageTrackableSet *imageTrackableSet = [[ARImageTrackableSet alloc] initWithBundledFile:filePath];
+    
+    //Setup TrackerManager
+    ARImageTrackerManager *imageTrackerManaer = [ARImageTrackerManager getInstance];
+    [imageTrackerManaer initialise];
+    [imageTrackerManaer addTrackableSet:imageTrackableSet];
+    
+    //Setup Gesture recognizers
+    for (ARImageTrackable *imageTrackable in imageTrackableSet.trackables) {
+        
+        [imageTrackable addTrackingEventTarget:self action:@selector(trackerDetected) forEvent:ARImageTrackableEventDetected];
+        [imageTrackable addTrackingEventTarget:self action:@selector(trackerLost) forEvent:ARImageTrackableEventLost];
+        
+        if ([imageTrackable.name containsString:@"video"]) {
+        }
+    }
+}
+
+- (void)setupGestureRecognizers {
+    // Add gesture recognisers.
+    UIPinchGestureRecognizer *pinchGesture = [[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(nodePinch:)];
+    [self.cameraView addGestureRecognizer:pinchGesture];
+    
+    UIPanGestureRecognizer *panGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(nodePan:)];
+    [self.cameraView addGestureRecognizer:panGesture];
+    
+    UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(nodeTap:)];
+    [self.cameraView addGestureRecognizer:tapGesture];
+}
+
 
 #pragma mark - AR Node Methods
 
@@ -45,6 +84,54 @@
 
 - (void)addNavigationNode {
     
+}
+
+#pragma mark - Event detection methods
+
+- (void)trackerDetected {
+    
+}
+
+- (void)trackerLost {
+    
+}
+
+#pragma mark - Gesture Recognizers
+
+- (void)nodeTap:(UITapGestureRecognizer *)gesture {
+    
+}
+
+- (void)nodePinch:(UIPinchGestureRecognizer *)gesture {
+    float scaleFactor = gesture.scale;
+    
+    if (gesture.state == UIGestureRecognizerStateBegan) {
+        lastScale = 1;
+    }
+    
+    scaleFactor = lastScale - (lastScale - scaleFactor);
+    
+    lastScale = gesture.scale;
+    
+    @synchronized ([ARRenderer getInstance]) {
+        [self.modelNode scaleByUniform:lastScale];
+    }
+}
+
+- (void)nodePan:(UIPanGestureRecognizer *)gesture {
+    float x = [gesture translationInView:self.cameraView].x;
+    
+    if (gesture.state == UIGestureRecognizerStateBegan) {
+        lastPanX = x;
+    }
+    
+    float diff = x - lastPanX;
+    
+    float deg = diff * 0.5;
+    
+    @synchronized ([ARRenderer getInstance]) {
+        [self.modelNode rotateByDegrees:deg axisX:0 y:1 z:0];
+    }
 }
 
 @end
