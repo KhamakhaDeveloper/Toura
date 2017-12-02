@@ -13,7 +13,29 @@
 		3A21F64E1FD2605B00D89F25 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A21F64D1FD2605B00D89F25 /* Assets.xcassets */; };
 		3A21F6511FD2605B00D89F25 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A21F64F1FD2605B00D89F25 /* LaunchScreen.storyboard */; };
 		3A21F6541FD2605B00D89F25 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A21F6531FD2605B00D89F25 /* main.m */; };
+		3A5FE5361FD27E74005079E8 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5FE5351FD27E74005079E8 /* LoginViewController.swift */; };
+		3A5FE5381FD2864E005079E8 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5FE5371FD2864E005079E8 /* Extensions.swift */; };
+		3A5FE53B1FD28F39005079E8 /* PulseAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5FE53A1FD28F39005079E8 /* PulseAnimation.swift */; };
+		3A5FE53D1FD290CE005079E8 /* SimpleChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5FE53C1FD290CE005079E8 /* SimpleChat.swift */; };
+		3A5FE53F1FD2911A005079E8 /* TouraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5FE53E1FD2911A005079E8 /* TouraViewController.swift */; };
 		65409B51B64E1AB2A01D7FA5 /* Pods_Toura.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 244337CCAA66B797AB241C00 /* Pods_Toura.framework */; };
+		FB1795FD1FD27393003E9BDD /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = FB1795FC1FD27393003E9BDD /* libc++.tbd */; };
+		FBD40ECD1FD29206006BCE4C /* udaipur.KARMarker in Resources */ = {isa = PBXBuildFile; fileRef = FBD40ECC1FD29206006BCE4C /* udaipur.KARMarker */; };
+		FBD40ED31FD29FBD006BCE4C /* Overlay.png in Resources */ = {isa = PBXBuildFile; fileRef = FBD40ED01FD29FBD006BCE4C /* Overlay.png */; };
+		FBD40ED41FD29FBD006BCE4C /* Overlay@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FBD40ED11FD29FBD006BCE4C /* Overlay@2x.png */; };
+		FBD40ED51FD29FBD006BCE4C /* Overlay@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = FBD40ED21FD29FBD006BCE4C /* Overlay@3x.png */; };
+		FBD40EDA1FD2BE69006BCE4C /* fortTexture.png in Resources */ = {isa = PBXBuildFile; fileRef = FBD40ED91FD2BE68006BCE4C /* fortTexture.png */; };
+		FBD40EDC1FD2BE8D006BCE4C /* Castle.armodel in Resources */ = {isa = PBXBuildFile; fileRef = FBD40EDB1FD2BE8D006BCE4C /* Castle.armodel */; };
+		FBD40EDE1FD2BEC6006BCE4C /* fort.png in Resources */ = {isa = PBXBuildFile; fileRef = FBD40EDD1FD2BEC6006BCE4C /* fort.png */; };
+		FBD40EDF1FD2BEFE006BCE4C /* KudanAR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB1795F11FD270A2003E9BDD /* KudanAR.framework */; };
+		FBD40EE01FD2BF71006BCE4C /* TrackerSetup.m in Sources */ = {isa = PBXBuildFile; fileRef = FBD40EC91FD28D84006BCE4C /* TrackerSetup.m */; };
+		FBD40EE11FD2BF80006BCE4C /* TARViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB1795FA1FD27199003E9BDD /* TARViewController.m */; };
+		FBD40EE21FD2BF87006BCE4C /* MarkerInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBD40ED61FD2A29C006BCE4C /* MarkerInfoViewController.m */; };
+		FBD40EE41FD2C29F006BCE4C /* texture.png in Resources */ = {isa = PBXBuildFile; fileRef = FBD40EE31FD2C29F006BCE4C /* texture.png */; };
+		FBD40EE61FD2CDB8006BCE4C /* hawaMahal.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = FBD40EE51FD2CDB3006BCE4C /* hawaMahal.mp4 */; };
+		FBD40EE81FD2CE9A006BCE4C /* hawamahal.png in Resources */ = {isa = PBXBuildFile; fileRef = FBD40EE71FD2CE9A006BCE4C /* hawamahal.png */; };
+		FBD40EF01FD2F02C006BCE4C /* vasundhara.JPG in Resources */ = {isa = PBXBuildFile; fileRef = FBD40EEF1FD2F02C006BCE4C /* vasundhara.JPG */; };
+		FBD40EF21FD2F063006BCE4C /* VR_1.png in Resources */ = {isa = PBXBuildFile; fileRef = FBD40EF11FD2F063006BCE4C /* VR_1.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,7 +52,33 @@
 		3A21F6521FD2605B00D89F25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3A21F6531FD2605B00D89F25 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3A3A04381FD2651700E51BE8 /* Toura-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Toura-Bridging-Header.h"; sourceTree = "<group>"; };
+		3A5FE5351FD27E74005079E8 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		3A5FE5371FD2864E005079E8 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		3A5FE53A1FD28F39005079E8 /* PulseAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PulseAnimation.swift; sourceTree = "<group>"; };
+		3A5FE53C1FD290CE005079E8 /* SimpleChat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleChat.swift; sourceTree = "<group>"; };
+		3A5FE53E1FD2911A005079E8 /* TouraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouraViewController.swift; sourceTree = "<group>"; };
 		EC21ECC610B16C2403ED440D /* Pods-Toura.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Toura.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Toura/Pods-Toura.debug.xcconfig"; sourceTree = "<group>"; };
+		FB1795F11FD270A2003E9BDD /* KudanAR.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = KudanAR.framework; sourceTree = "<group>"; };
+		FB1795F91FD27199003E9BDD /* TARViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TARViewController.h; sourceTree = "<group>"; };
+		FB1795FA1FD27199003E9BDD /* TARViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TARViewController.m; sourceTree = "<group>"; };
+		FB1795FC1FD27393003E9BDD /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		FBD40EC81FD28D84006BCE4C /* TrackerSetup.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TrackerSetup.h; sourceTree = "<group>"; };
+		FBD40EC91FD28D84006BCE4C /* TrackerSetup.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TrackerSetup.m; sourceTree = "<group>"; };
+		FBD40ECC1FD29206006BCE4C /* udaipur.KARMarker */ = {isa = PBXFileReference; lastKnownFileType = file; path = udaipur.KARMarker; sourceTree = "<group>"; };
+		FBD40ECE1FD29539006BCE4C /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		FBD40ED01FD29FBD006BCE4C /* Overlay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Overlay.png; sourceTree = "<group>"; };
+		FBD40ED11FD29FBD006BCE4C /* Overlay@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Overlay@2x.png"; sourceTree = "<group>"; };
+		FBD40ED21FD29FBD006BCE4C /* Overlay@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Overlay@3x.png"; sourceTree = "<group>"; };
+		FBD40ED61FD2A29C006BCE4C /* MarkerInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MarkerInfoViewController.m; sourceTree = "<group>"; };
+		FBD40ED71FD2A29C006BCE4C /* MarkerInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MarkerInfoViewController.h; sourceTree = "<group>"; };
+		FBD40ED91FD2BE68006BCE4C /* fortTexture.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fortTexture.png; sourceTree = "<group>"; };
+		FBD40EDB1FD2BE8D006BCE4C /* Castle.armodel */ = {isa = PBXFileReference; lastKnownFileType = file; path = Castle.armodel; sourceTree = "<group>"; };
+		FBD40EDD1FD2BEC6006BCE4C /* fort.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fort.png; sourceTree = "<group>"; };
+		FBD40EE31FD2C29F006BCE4C /* texture.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = texture.png; sourceTree = "<group>"; };
+		FBD40EE51FD2CDB3006BCE4C /* hawaMahal.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = hawaMahal.mp4; sourceTree = "<group>"; };
+		FBD40EE71FD2CE9A006BCE4C /* hawamahal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hawamahal.png; sourceTree = "<group>"; };
+		FBD40EEF1FD2F02C006BCE4C /* vasundhara.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = vasundhara.JPG; sourceTree = "<group>"; };
+		FBD40EF11FD2F063006BCE4C /* VR_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = VR_1.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +86,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FBD40EDF1FD2BEFE006BCE4C /* KudanAR.framework in Frameworks */,
+				FB1795FD1FD27393003E9BDD /* libc++.tbd in Frameworks */,
 				65409B51B64E1AB2A01D7FA5 /* Pods_Toura.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -48,6 +98,7 @@
 		3A21F6381FD2605B00D89F25 = {
 			isa = PBXGroup;
 			children = (
+				FB1795F11FD270A2003E9BDD /* KudanAR.framework */,
 				3A21F6431FD2605B00D89F25 /* Toura */,
 				3A21F6421FD2605B00D89F25 /* Products */,
 				7201762B5B639F943A641B63 /* Pods */,
@@ -68,9 +119,14 @@
 			children = (
 				3A21F6441FD2605B00D89F25 /* AppDelegate.h */,
 				3A21F6451FD2605B00D89F25 /* AppDelegate.m */,
+				FBD40ECE1FD29539006BCE4C /* Constants.h */,
+				FBD40ECF1FD29FBD006BCE4C /* Assets */,
+				FBD40ECB1FD29206006BCE4C /* Resources */,
+				FB1795F81FD27199003E9BDD /* ViewControllers */,
 				3A21F6471FD2605B00D89F25 /* ViewController.h */,
 				3A21F6481FD2605B00D89F25 /* ViewController.m */,
 				3A21F64A1FD2605B00D89F25 /* Main.storyboard */,
+				3A5FE5391FD28F19005079E8 /* SwiftFiles */,
 				3A21F64D1FD2605B00D89F25 /* Assets.xcassets */,
 				3A21F64F1FD2605B00D89F25 /* LaunchScreen.storyboard */,
 				3A21F6521FD2605B00D89F25 /* Info.plist */,
@@ -78,6 +134,18 @@
 				3A3A04381FD2651700E51BE8 /* Toura-Bridging-Header.h */,
 			);
 			path = Toura;
+			sourceTree = "<group>";
+		};
+		3A5FE5391FD28F19005079E8 /* SwiftFiles */ = {
+			isa = PBXGroup;
+			children = (
+				3A5FE5351FD27E74005079E8 /* LoginViewController.swift */,
+				3A5FE53A1FD28F39005079E8 /* PulseAnimation.swift */,
+				3A5FE5371FD2864E005079E8 /* Extensions.swift */,
+				3A5FE53C1FD290CE005079E8 /* SimpleChat.swift */,
+				3A5FE53E1FD2911A005079E8 /* TouraViewController.swift */,
+			);
+			name = SwiftFiles;
 			sourceTree = "<group>";
 		};
 		7201762B5B639F943A641B63 /* Pods */ = {
@@ -92,9 +160,49 @@
 		966950040725DB8F4B7A5734 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FB1795FC1FD27393003E9BDD /* libc++.tbd */,
 				244337CCAA66B797AB241C00 /* Pods_Toura.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FB1795F81FD27199003E9BDD /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				FB1795F91FD27199003E9BDD /* TARViewController.h */,
+				FB1795FA1FD27199003E9BDD /* TARViewController.m */,
+				FBD40ED71FD2A29C006BCE4C /* MarkerInfoViewController.h */,
+				FBD40ED61FD2A29C006BCE4C /* MarkerInfoViewController.m */,
+				FBD40EC81FD28D84006BCE4C /* TrackerSetup.h */,
+				FBD40EC91FD28D84006BCE4C /* TrackerSetup.m */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		FBD40ECB1FD29206006BCE4C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FBD40ECC1FD29206006BCE4C /* udaipur.KARMarker */,
+				FBD40EE51FD2CDB3006BCE4C /* hawaMahal.mp4 */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		FBD40ECF1FD29FBD006BCE4C /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				FBD40ED01FD29FBD006BCE4C /* Overlay.png */,
+				FBD40ED11FD29FBD006BCE4C /* Overlay@2x.png */,
+				FBD40ED21FD29FBD006BCE4C /* Overlay@3x.png */,
+				FBD40ED91FD2BE68006BCE4C /* fortTexture.png */,
+				FBD40EE31FD2C29F006BCE4C /* texture.png */,
+				FBD40EE71FD2CE9A006BCE4C /* hawamahal.png */,
+				FBD40EEF1FD2F02C006BCE4C /* vasundhara.JPG */,
+				FBD40EF11FD2F063006BCE4C /* VR_1.png */,
+				FBD40EDD1FD2BEC6006BCE4C /* fort.png */,
+				FBD40EDB1FD2BE8D006BCE4C /* Castle.armodel */,
+			);
+			path = Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -159,9 +267,21 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FBD40EE61FD2CDB8006BCE4C /* hawaMahal.mp4 in Resources */,
+				FBD40EE41FD2C29F006BCE4C /* texture.png in Resources */,
 				3A21F6511FD2605B00D89F25 /* LaunchScreen.storyboard in Resources */,
+				FBD40ED31FD29FBD006BCE4C /* Overlay.png in Resources */,
+				FBD40ECD1FD29206006BCE4C /* udaipur.KARMarker in Resources */,
+				FBD40EE81FD2CE9A006BCE4C /* hawamahal.png in Resources */,
+				FBD40EF21FD2F063006BCE4C /* VR_1.png in Resources */,
 				3A21F64E1FD2605B00D89F25 /* Assets.xcassets in Resources */,
 				3A21F64C1FD2605B00D89F25 /* Main.storyboard in Resources */,
+				FBD40ED41FD29FBD006BCE4C /* Overlay@2x.png in Resources */,
+				FBD40EF01FD2F02C006BCE4C /* vasundhara.JPG in Resources */,
+				FBD40EDE1FD2BEC6006BCE4C /* fort.png in Resources */,
+				FBD40EDC1FD2BE8D006BCE4C /* Castle.armodel in Resources */,
+				FBD40EDA1FD2BE69006BCE4C /* fortTexture.png in Resources */,
+				FBD40ED51FD29FBD006BCE4C /* Overlay@3x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -220,9 +340,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FBD40EE11FD2BF80006BCE4C /* TARViewController.m in Sources */,
+				3A5FE5381FD2864E005079E8 /* Extensions.swift in Sources */,
 				3A21F6491FD2605B00D89F25 /* ViewController.m in Sources */,
 				3A21F6541FD2605B00D89F25 /* main.m in Sources */,
+				FBD40EE01FD2BF71006BCE4C /* TrackerSetup.m in Sources */,
+				3A5FE5361FD27E74005079E8 /* LoginViewController.swift in Sources */,
+				3A5FE53B1FD28F39005079E8 /* PulseAnimation.swift in Sources */,
+				FBD40EE21FD2BF87006BCE4C /* MarkerInfoViewController.m in Sources */,
 				3A21F6461FD2605B00D89F25 /* AppDelegate.m in Sources */,
+				3A5FE53F1FD2911A005079E8 /* TouraViewController.swift in Sources */,
+				3A5FE53D1FD290CE005079E8 /* SimpleChat.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -359,10 +487,15 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 47MSQYF4A8;
+				DEVELOPMENT_TEAM = 6LJ9Y6X5NU;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Toura/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.techmusk.Toura;
+				PRODUCT_BUNDLE_IDENTIFIER = eu.kudan.ar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Toura/Toura-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -378,10 +511,15 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 47MSQYF4A8;
+				DEVELOPMENT_TEAM = 6LJ9Y6X5NU;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Toura/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.techmusk.Toura;
+				PRODUCT_BUNDLE_IDENTIFIER = eu.kudan.ar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Toura/Toura-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;

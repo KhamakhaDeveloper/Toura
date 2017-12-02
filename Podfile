@@ -6,5 +6,5 @@ target 'Toura' do
   use_frameworks!
 
   # Pods for Toura
-
+  pod 'ApiAI'
 end
