@@ -40,6 +40,7 @@ class TouraViewController: ChatController {
         self.setUpAPIAI()
         self.delegate = self
         setupChatController()
+        self.title = "Toura Chat"
     }
     
     override func didReceiveMemoryWarning() {
