@@ -7,15 +7,17 @@
 //
 
 #import "TARViewController.h"
+#import "TrackerSetup.h"
+#import "Constants.h"
 
-@interface TARViewController () {
+@interface TARViewController ()<ImageTrackerDelegate> {
     
     float lastScale;
     float lastPanX;
 }
 
 @property (nonatomic) ARModelNode *modelNode;
-@property (nonatomic) ARImageTrackable *markerTracable;
+//@property (nonatomic) ARImageTrackable *markerTracable;
 
 @end
 
@@ -31,24 +33,8 @@
 // Doing it using multiple markers .KARMarker set
 
 - (void)setupTracableMarkers {
-    //Setup imageTrackableSet
-    NSString *filePath = [[[NSBundle mainBundle] resourcePath] stringByAppendingString:@"locations.KARMarker"];
-    ARImageTrackableSet *imageTrackableSet = [[ARImageTrackableSet alloc] initWithBundledFile:filePath];
-    
-    //Setup TrackerManager
-    ARImageTrackerManager *imageTrackerManaer = [ARImageTrackerManager getInstance];
-    [imageTrackerManaer initialise];
-    [imageTrackerManaer addTrackableSet:imageTrackableSet];
-    
-    //Setup Gesture recognizers
-    for (ARImageTrackable *imageTrackable in imageTrackableSet.trackables) {
-        
-        [imageTrackable addTrackingEventTarget:self action:@selector(trackerDetected) forEvent:ARImageTrackableEventDetected];
-        [imageTrackable addTrackingEventTarget:self action:@selector(trackerLost) forEvent:ARImageTrackableEventLost];
-        
-        if ([imageTrackable.name containsString:@"video"]) {
-        }
-    }
+    TrackerSetup *trackerSetup = [[TrackerSetup alloc] init];
+    [trackerSetup intialise];
 }
 
 - (void)setupGestureRecognizers {
@@ -86,14 +72,15 @@
     
 }
 
-#pragma mark - Event detection methods
-
-- (void)trackerDetected {
+- (void)loadAppropriateARNode:(ARImageTrackable *)imageTrackable {
     
 }
 
-- (void)trackerLost {
-    
+#pragma mark - Tracker Setup Delegate Methods
+
+- (void)detectedTrackable:(ARImageTrackable *)imageTrackable {
+    if ([imageTrackable.name isEqualToString:UDAIPUR_MARKER_NAME]) {
+    }
 }
 
 #pragma mark - Gesture Recognizers

@@ -17,6 +17,8 @@
 		FB1795F21FD270A2003E9BDD /* KudanAR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB1795F11FD270A2003E9BDD /* KudanAR.framework */; };
 		FB1795FB1FD2719A003E9BDD /* TARViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB1795FA1FD27199003E9BDD /* TARViewController.m */; };
 		FB1795FD1FD27393003E9BDD /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = FB1795FC1FD27393003E9BDD /* libc++.tbd */; };
+		FBD40ECA1FD28D84006BCE4C /* TrackerSetup.m in Sources */ = {isa = PBXBuildFile; fileRef = FBD40EC91FD28D84006BCE4C /* TrackerSetup.m */; };
+		FBD40ECD1FD29206006BCE4C /* udaipur.KARMarker in Resources */ = {isa = PBXBuildFile; fileRef = FBD40ECC1FD29206006BCE4C /* udaipur.KARMarker */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,10 @@
 		FB1795F91FD27199003E9BDD /* TARViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TARViewController.h; sourceTree = "<group>"; };
 		FB1795FA1FD27199003E9BDD /* TARViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TARViewController.m; sourceTree = "<group>"; };
 		FB1795FC1FD27393003E9BDD /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		FBD40EC81FD28D84006BCE4C /* TrackerSetup.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TrackerSetup.h; sourceTree = "<group>"; };
+		FBD40EC91FD28D84006BCE4C /* TrackerSetup.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TrackerSetup.m; sourceTree = "<group>"; };
+		FBD40ECC1FD29206006BCE4C /* udaipur.KARMarker */ = {isa = PBXFileReference; lastKnownFileType = file; path = udaipur.KARMarker; sourceTree = "<group>"; };
+		FBD40ECE1FD29539006BCE4C /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +84,8 @@
 			children = (
 				3A21F6441FD2605B00D89F25 /* AppDelegate.h */,
 				3A21F6451FD2605B00D89F25 /* AppDelegate.m */,
+				FBD40ECE1FD29539006BCE4C /* Constants.h */,
+				FBD40ECB1FD29206006BCE4C /* Resources */,
 				FB1795F81FD27199003E9BDD /* ViewControllers */,
 				3A21F6471FD2605B00D89F25 /* ViewController.h */,
 				3A21F6481FD2605B00D89F25 /* ViewController.m */,
@@ -114,8 +122,18 @@
 			children = (
 				FB1795F91FD27199003E9BDD /* TARViewController.h */,
 				FB1795FA1FD27199003E9BDD /* TARViewController.m */,
+				FBD40EC81FD28D84006BCE4C /* TrackerSetup.h */,
+				FBD40EC91FD28D84006BCE4C /* TrackerSetup.m */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		FBD40ECB1FD29206006BCE4C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FBD40ECC1FD29206006BCE4C /* udaipur.KARMarker */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -181,6 +199,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A21F6511FD2605B00D89F25 /* LaunchScreen.storyboard in Resources */,
+				FBD40ECD1FD29206006BCE4C /* udaipur.KARMarker in Resources */,
 				3A21F64E1FD2605B00D89F25 /* Assets.xcassets in Resources */,
 				3A21F64C1FD2605B00D89F25 /* Main.storyboard in Resources */,
 			);
@@ -242,6 +261,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB1795FB1FD2719A003E9BDD /* TARViewController.m in Sources */,
+				FBD40ECA1FD28D84006BCE4C /* TrackerSetup.m in Sources */,
 				3A21F6491FD2605B00D89F25 /* ViewController.m in Sources */,
 				3A21F6541FD2605B00D89F25 /* main.m in Sources */,
 				3A21F6461FD2605B00D89F25 /* AppDelegate.m in Sources */,
