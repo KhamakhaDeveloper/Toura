@@ -31,7 +31,7 @@ class LoginViewController: UIViewController {
         super.viewWillAppear(true)
         UIView.animate(withDuration: 1.0, animations: {
             self.logoVerticalConstraint.constant = -150
-            self.view.layoutIfNeeded()
+            self.view.layoutSubviews()
         })
         self.transparentNavigationBar()
         UIApplication.shared.statusBarStyle = .lightContent
