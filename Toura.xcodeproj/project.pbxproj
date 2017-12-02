@@ -13,9 +13,12 @@
 		3A21F64E1FD2605B00D89F25 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A21F64D1FD2605B00D89F25 /* Assets.xcassets */; };
 		3A21F6511FD2605B00D89F25 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A21F64F1FD2605B00D89F25 /* LaunchScreen.storyboard */; };
 		3A21F6541FD2605B00D89F25 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A21F6531FD2605B00D89F25 /* main.m */; };
+		65409B51B64E1AB2A01D7FA5 /* Pods_Toura.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 244337CCAA66B797AB241C00 /* Pods_Toura.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		244337CCAA66B797AB241C00 /* Pods_Toura.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Toura.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2DAC2A32CBDBB7DC564BD33D /* Pods-Toura.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Toura.release.xcconfig"; path = "Pods/Target Support Files/Pods-Toura/Pods-Toura.release.xcconfig"; sourceTree = "<group>"; };
 		3A21F6411FD2605B00D89F25 /* Toura.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Toura.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A21F6441FD2605B00D89F25 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3A21F6451FD2605B00D89F25 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -27,6 +30,7 @@
 		3A21F6521FD2605B00D89F25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3A21F6531FD2605B00D89F25 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3A3A04381FD2651700E51BE8 /* Toura-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Toura-Bridging-Header.h"; sourceTree = "<group>"; };
+		EC21ECC610B16C2403ED440D /* Pods-Toura.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Toura.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Toura/Pods-Toura.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -34,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65409B51B64E1AB2A01D7FA5 /* Pods_Toura.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -45,6 +50,8 @@
 			children = (
 				3A21F6431FD2605B00D89F25 /* Toura */,
 				3A21F6421FD2605B00D89F25 /* Products */,
+				7201762B5B639F943A641B63 /* Pods */,
+				966950040725DB8F4B7A5734 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -73,6 +80,23 @@
 			path = Toura;
 			sourceTree = "<group>";
 		};
+		7201762B5B639F943A641B63 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EC21ECC610B16C2403ED440D /* Pods-Toura.debug.xcconfig */,
+				2DAC2A32CBDBB7DC564BD33D /* Pods-Toura.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		966950040725DB8F4B7A5734 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				244337CCAA66B797AB241C00 /* Pods_Toura.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -80,9 +104,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3A21F6571FD2605B00D89F25 /* Build configuration list for PBXNativeTarget "Toura" */;
 			buildPhases = (
+				3F78172770CD14C723FFF98D /* [CP] Check Pods Manifest.lock */,
 				3A21F63D1FD2605B00D89F25 /* Sources */,
 				3A21F63E1FD2605B00D89F25 /* Frameworks */,
 				3A21F63F1FD2605B00D89F25 /* Resources */,
+				1D085D0920087FB1FD1A7602 /* [CP] Embed Pods Frameworks */,
+				39FD16078E98DE780AE0CC8C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -139,6 +166,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1D085D0920087FB1FD1A7602 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Toura/Pods-Toura-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		39FD16078E98DE780AE0CC8C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Toura/Pods-Toura-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3F78172770CD14C723FFF98D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3A21F63D1FD2605B00D89F25 /* Sources */ = {
@@ -279,6 +354,7 @@
 		};
 		3A21F6581FD2605B00D89F25 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EC21ECC610B16C2403ED440D /* Pods-Toura.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -297,6 +373,7 @@
 		};
 		3A21F6591FD2605B00D89F25 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2DAC2A32CBDBB7DC564BD33D /* Pods-Toura.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
