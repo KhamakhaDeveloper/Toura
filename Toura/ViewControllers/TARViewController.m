@@ -33,20 +33,21 @@
 // Doing it using multiple markers .KARMarker set
 
 - (void)setupTracableMarkers {
-    TrackerSetup *trackerSetup = [[TrackerSetup alloc] init];
-    [trackerSetup intialise];
+    [TrackerSetup sharedManager];
 }
 
 - (void)setupGestureRecognizers {
     // Add gesture recognisers.
-    UIPinchGestureRecognizer *pinchGesture = [[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(nodePinch:)];
-    [self.cameraView addGestureRecognizer:pinchGesture];
-    
-    UIPanGestureRecognizer *panGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(nodePan:)];
-    [self.cameraView addGestureRecognizer:panGesture];
-    
-    UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(nodeTap:)];
-    [self.cameraView addGestureRecognizer:tapGesture];
+        dispatch_async(dispatch_get_main_queue(), ^{
+        UIPinchGestureRecognizer *pinchGesture = [[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(nodePinch:)];
+        [self.cameraView addGestureRecognizer:pinchGesture];
+        
+        UIPanGestureRecognizer *panGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(nodePan:)];
+        [self.cameraView addGestureRecognizer:panGesture];
+        
+        UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(nodeTap:)];
+        [self.cameraView addGestureRecognizer:tapGesture];
+    });
 }
 
 
@@ -119,6 +120,12 @@
     @synchronized ([ARRenderer getInstance]) {
         [self.modelNode rotateByDegrees:deg axisX:0 y:1 z:0];
     }
+}
+
+#pragma mark - IBAction Methods
+
+- (IBAction)TouraBotButtonAction:(id)sender {
+    [self performSegueWithIdentifier:@"TouraBot" sender:nil];
 }
 
 @end

@@ -22,6 +22,6 @@
 @property(nonatomic) id<ImageTrackerDelegate>delegate;
 
 //Instance methods
-- (void)intialise;
++ (void)sharedManager;
 
 @end

@@ -15,22 +15,35 @@
 
 @implementation TrackerSetup
 
-- (void)intialise{
-    [self setupTrackableContent];
+- (id)init {
+    if (self = [super init]) {
+    }
+    return self;
+}
+
++ (id)sharedManager{
+    static TrackerSetup *trackerSetup = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+         trackerSetup = [[self alloc] init];
+        [trackerSetup setupTrackableContent];
+    });
+    return trackerSetup;
 }
 
 - (void)setupTrackableContent {
     //Setup imageTrackableSet
-    NSString *filePath = [[[NSBundle mainBundle] resourcePath] stringByAppendingString:@"udaipur.KARMarker"];
-    ARImageTrackableSet *imageTrackableSet = [[ARImageTrackableSet alloc] initWithBundledFile:filePath];
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"udaipur" ofType:@"KARMarker"];
+    ARImageTrackableSet *imageTrackableSet = [[ARImageTrackableSet alloc] initWithPath:filePath];
     
     //Setup TrackerManager
-    ARImageTrackerManager *imageTrackerManaer = [ARImageTrackerManager getInstance];
-    [imageTrackerManaer initialise];
-    [imageTrackerManaer toggleParallelDetection:YES];
-    [imageTrackerManaer setMaximumSimultaneousTracking:10];
+    ARImageTrackerManager *imageTrackerManager = [ARImageTrackerManager getInstance];
+    [imageTrackerManager initialise];
+    [imageTrackerManager toggleParallelDetection:YES];
+    [imageTrackerManager setMaximumSimultaneousTracking:10];
+    [imageTrackerManager start];
     
-    [imageTrackerManaer addTrackableSet:imageTrackableSet];
+    [imageTrackerManager addTrackableSet:imageTrackableSet];
     
     //Setup Gesture recognizers
     for (ARImageTrackable *imageTrackable in imageTrackableSet.trackables) {
@@ -46,7 +59,7 @@
 
 - (void)trackerDetected:(ARImageTrackable *)imageTrackable {
     // Initialise image node
-    ARImageNode *imageNode = [[ARImageNode alloc] initWithBundledFile:@"overlay.png"];
+    ARImageNode *imageNode = [[ARImageNode alloc] initWithBundledFile:@"Overlay.png"];
     
     // Add image node to image trackable
     [imageTrackable.world addChild:imageNode];

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="HkT-zo-dD7">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="HkT-zo-dD7">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -101,7 +101,7 @@
         <!--View Controller-->
         <scene sceneID="hz4-Ee-KEq">
             <objects>
-                <viewController id="Lwq-AL-ey9" customClass="ViewController" sceneMemberID="viewController">
+                <viewController id="Lwq-AL-ey9" customClass="TARViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SZh-y0-XJk">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -110,7 +110,7 @@
                                 <rect key="frame" x="291" y="617" width="68" height="30"/>
                                 <state key="normal" title="Ask Toura"/>
                                 <connections>
-                                    <action selector="TouraBotButtonAction:" destination="Lwq-AL-ey9" eventType="touchUpInside" id="fbi-Ws-cks"/>
+                                    <action selector="TouraBotButtonAction:" destination="Lwq-AL-ey9" eventType="touchUpInside" id="cD7-7s-DEe"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -123,7 +123,6 @@
                     </view>
                     <navigationItem key="navigationItem" id="w3w-NT-u87"/>
                     <connections>
-                        <outlet property="touraChatButton" destination="5Ql-9S-RGu" id="iuI-UI-vx2"/>
                         <segue destination="Fix-iR-xEH" kind="show" identifier="TouraBot" id="kRc-3e-qAZ"/>
                     </connections>
                 </viewController>

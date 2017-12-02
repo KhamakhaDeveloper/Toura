@@ -24,6 +24,9 @@
 		FB1795FD1FD27393003E9BDD /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = FB1795FC1FD27393003E9BDD /* libc++.tbd */; };
 		FBD40ECA1FD28D84006BCE4C /* TrackerSetup.m in Sources */ = {isa = PBXBuildFile; fileRef = FBD40EC91FD28D84006BCE4C /* TrackerSetup.m */; };
 		FBD40ECD1FD29206006BCE4C /* udaipur.KARMarker in Resources */ = {isa = PBXBuildFile; fileRef = FBD40ECC1FD29206006BCE4C /* udaipur.KARMarker */; };
+		FBD40ED31FD29FBD006BCE4C /* Overlay.png in Resources */ = {isa = PBXBuildFile; fileRef = FBD40ED01FD29FBD006BCE4C /* Overlay.png */; };
+		FBD40ED41FD29FBD006BCE4C /* Overlay@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FBD40ED11FD29FBD006BCE4C /* Overlay@2x.png */; };
+		FBD40ED51FD29FBD006BCE4C /* Overlay@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = FBD40ED21FD29FBD006BCE4C /* Overlay@3x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +57,9 @@
 		FBD40EC91FD28D84006BCE4C /* TrackerSetup.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TrackerSetup.m; sourceTree = "<group>"; };
 		FBD40ECC1FD29206006BCE4C /* udaipur.KARMarker */ = {isa = PBXFileReference; lastKnownFileType = file; path = udaipur.KARMarker; sourceTree = "<group>"; };
 		FBD40ECE1FD29539006BCE4C /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		FBD40ED01FD29FBD006BCE4C /* Overlay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Overlay.png; sourceTree = "<group>"; };
+		FBD40ED11FD29FBD006BCE4C /* Overlay@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Overlay@2x.png"; sourceTree = "<group>"; };
+		FBD40ED21FD29FBD006BCE4C /* Overlay@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Overlay@3x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +101,7 @@
 				3A21F6441FD2605B00D89F25 /* AppDelegate.h */,
 				3A21F6451FD2605B00D89F25 /* AppDelegate.m */,
 				FBD40ECE1FD29539006BCE4C /* Constants.h */,
+				FBD40ECF1FD29FBD006BCE4C /* Assets */,
 				FBD40ECB1FD29206006BCE4C /* Resources */,
 				FB1795F81FD27199003E9BDD /* ViewControllers */,
 				3A21F6471FD2605B00D89F25 /* ViewController.h */,
@@ -157,6 +164,16 @@
 				FBD40ECC1FD29206006BCE4C /* udaipur.KARMarker */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		FBD40ECF1FD29FBD006BCE4C /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				FBD40ED01FD29FBD006BCE4C /* Overlay.png */,
+				FBD40ED11FD29FBD006BCE4C /* Overlay@2x.png */,
+				FBD40ED21FD29FBD006BCE4C /* Overlay@3x.png */,
+			);
+			path = Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -222,9 +239,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A21F6511FD2605B00D89F25 /* LaunchScreen.storyboard in Resources */,
+				FBD40ED31FD29FBD006BCE4C /* Overlay.png in Resources */,
 				FBD40ECD1FD29206006BCE4C /* udaipur.KARMarker in Resources */,
 				3A21F64E1FD2605B00D89F25 /* Assets.xcassets in Resources */,
 				3A21F64C1FD2605B00D89F25 /* Main.storyboard in Resources */,
+				FBD40ED41FD29FBD006BCE4C /* Overlay@2x.png in Resources */,
+				FBD40ED51FD29FBD006BCE4C /* Overlay@3x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -429,7 +449,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 47MSQYF4A8;
+				DEVELOPMENT_TEAM = 6LJ9Y6X5NU;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -437,7 +457,7 @@
 				);
 				INFOPLIST_FILE = Toura/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.techmusk.Toura;
+				PRODUCT_BUNDLE_IDENTIFIER = eu.kudan.ar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Toura/Toura-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -453,7 +473,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 47MSQYF4A8;
+				DEVELOPMENT_TEAM = 6LJ9Y6X5NU;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -461,7 +481,7 @@
 				);
 				INFOPLIST_FILE = Toura/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.techmusk.Toura;
+				PRODUCT_BUNDLE_IDENTIFIER = eu.kudan.ar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Toura/Toura-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
