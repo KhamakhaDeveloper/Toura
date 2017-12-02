@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="HkT-zo-dD7">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="HkT-zo-dD7">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -92,7 +92,7 @@
                         <viewLayoutGuide key="safeArea" id="xMI-Wo-86H"/>
                     </view>
                     <navigationItem key="navigationItem" id="yWg-cz-Xyv">
-                        <barButtonItem key="backBarButtonItem" title="Logout" id="NOQ-Ik-8hS"/>
+                        <barButtonItem key="backBarButtonItem" title="   " id="NOQ-Ik-8hS"/>
                     </navigationItem>
                     <connections>
                         <outlet property="logoVerticalConstraint" destination="cnE-dh-8SY" id="a9l-pL-dFt"/>
@@ -287,6 +287,6 @@
         <image name="PulseButtonBG" width="40" height="40"/>
         <image name="UserNameBG" width="323" height="27"/>
         <image name="fort" width="1964" height="1430"/>
-        <image name="fort.png" width="16" height="16"/>
+        <image name="fort.png" width="1964" height="1430"/>
     </resources>
 </document>
