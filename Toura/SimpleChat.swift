@@ -49,12 +49,14 @@ class ChatMessage : NSObject {
     var sentBy: SentBy
     var content: String
     var timeStamp: TimeInterval?
+    var image : UIImage?
     
-    required init (content: String, sentBy: SentBy, timeStamp: TimeInterval? = nil){
+    required init (content: String, sentBy: SentBy, timeStamp: TimeInterval? = nil, image: UIImage? = UIImage()){
         self.sentBy = sentBy
         self.timeStamp = timeStamp
         self.content = content
     }
+    
     
     // MARK: ObjC Compatibility
     
@@ -73,6 +75,14 @@ class ChatMessage : NSObject {
             fatalError("ChatMessage.FatalError : Initialization : Incompatible string set to SentByString!")
         }
     }
+    
+    convenience init (content: String, sentByString: String, image: UIImage) {
+        if let sentBy = SentBy(rawValue: sentByString) {
+            self.init(content: content, sentBy: sentBy, image: image)
+        } else {
+            fatalError("ChatMessage.FatalError : Initialization : Incompatible string set to SentByString!")
+        }
+    }
 }
 
 // MARK: Message Cell
@@ -82,8 +92,8 @@ class ChatMessageCell : UITableViewCell {
     // MARK: Global MessageCell Appearance Modifier
     
     struct Appearance {
-        static var opponentColor = UIColor.fromHex("874BFC")//(red: 0.142954, green: 0.60323, blue: 0.862548, alpha: 0.88)
-        static var userColor = UIColor.fromHex("ADB6FF")//(red: 0.14726, green: 0.838161, blue: 0.533935, alpha: 1)
+        static var opponentColor = UIColor.fromHex("579FF3")//(red: 0.142954, green: 0.60323, blue: 0.862548, alpha: 0.88)
+        static var userColor = UIColor.fromHex("FFFFFF")//(red: 0.14726, green: 0.838161, blue: 0.533935, alpha: 1)
         static var font: UIFont = UIFont.systemFont(ofSize: 15.0)
     }
     
@@ -189,6 +199,19 @@ class ChatMessageCell : UITableViewCell {
     /*!
      Use this in cellForRowAtIndexPath to setup the cell.
      */
+    func urlDetector(text : String)-> Bool{
+        var isURL = false
+        let string = text
+        let types: NSTextCheckingResult.CheckingType = .link
+        let detector = try? NSDataDetector(types: types.rawValue)
+        detector?.enumerateMatches(in: string, options: [], range: NSMakeRange(0, (string as NSString).length)) { (result, flags, _) in
+            if(result?.url != nil){
+                isURL = true
+            }
+        }
+        return isURL
+    }
+    
     func setupWithMessage(_ message: ChatMessage) -> CGSize {
         textView.text = message.content
         size = textView.sizeThatFits(maxSize)
@@ -210,12 +233,13 @@ class ChatMessageCell : UITableViewCell {
         let targetX = halfTextViewWidth + padding
         let halfTextViewHeight = self.textView.bounds.height / 2.0
         self.textView.textColor = UIColor.white
+        self.backgroundColor = UIColor.clear
         switch sentBy {
         case .Opponent:
             self.textView.center.x = targetX
             self.textView.center.y = halfTextViewHeight
             self.textView.layer.borderColor = Appearance.opponentColor.cgColor
-            self.textView.backgroundColor = UIColor.fromHex("A273FF")
+            self.textView.backgroundColor = UIColor.fromHex("579FF3")
             
             if self.opponentImageView.image != nil {
                 self.opponentImageView.isHidden = false
@@ -227,7 +251,8 @@ class ChatMessageCell : UITableViewCell {
             self.textView.center.x = self.bounds.width - targetX
             self.textView.center.y = halfTextViewHeight
             self.textView.layer.borderColor = Appearance.userColor.cgColor
-            self.textView.backgroundColor = UIColor.fromHex("8995FF")
+            self.textView.textColor = UIColor.fromHex("4E5974")
+            self.textView.backgroundColor = Appearance.userColor
         }
         
     }
@@ -321,6 +346,8 @@ class ChatController : UIViewController, UITableViewDelegate, UITableViewDataSou
         tableView.delegate = self
         tableView.dataSource = self
         tableView.contentInset = UIEdgeInsets(top: 10, left: 0, bottom: 0, right: 0)
+        self.view.backgroundColor = UIColor.fromHex("F0F3F5")
+        tableView.backgroundColor = UIColor.clear
         self.view.addSubview(tableView)
     }
     
