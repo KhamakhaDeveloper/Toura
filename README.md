@@ -6,6 +6,6 @@
 - Toura sets a milestone in Tourism by offering exciting features for both Tourists and Government.
 - Also Toura can help local vendors to improve their businesses (Beta).
 <br />
-![Alt text](https://github.com/DeepakCarpenter/Toura/blob/master/Toura/Assets/Screenshot.png?raw=true "Toura - Transforming Tourism Digitally ")
+
 
 ![Alt text](https://github.com/DeepakCarpenter/Toura/blob/master/Toura/Assets/Screenshot.png?raw=true "Toura - Transforming Tourism Digitally")
