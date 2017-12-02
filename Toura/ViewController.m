@@ -12,13 +12,24 @@
 @end
 
 @implementation ViewController
-@class PulseAnaimation;
 @synthesize touraChatButton = _touraChatButton;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    [self pulseEffect];
     // Do any additional setup after loading the view, typically from a nib.
+}
+
+-(void)pulseEffect{
+    CABasicAnimation *theAnimation;
+    theAnimation=[CABasicAnimation animationWithKeyPath:@"transform.scale"];
+    theAnimation.duration=0.7;
+    theAnimation.repeatCount= 20;
+    theAnimation.autoreverses=YES;
+    theAnimation.fromValue=[NSNumber numberWithFloat:1.5];
+    theAnimation.toValue=[NSNumber numberWithFloat:0.7];
+    theAnimation.timingFunction=[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn];
+    [self.touraChatButton.layer addAnimation:theAnimation forKey:@"animateOpacity"];
 }
 
 -(void)viewWillAppear:(BOOL)animated{

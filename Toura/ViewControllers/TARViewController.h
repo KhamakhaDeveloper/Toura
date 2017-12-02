@@ -10,5 +10,6 @@
 #import <KudanAR/KudanAR.h>
 
 @interface TARViewController : ARCameraViewController
+@property (strong, nonatomic) IBOutlet UIButton *touraChatButton;
 
 @end

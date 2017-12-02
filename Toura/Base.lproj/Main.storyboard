@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="HkT-zo-dD7">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="HkT-zo-dD7">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -106,9 +106,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Ql-9S-RGu">
-                                <rect key="frame" x="291" y="617" width="68" height="30"/>
-                                <state key="normal" title="Ask Toura"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Ql-9S-RGu">
+                                <rect key="frame" x="319" y="607" width="40" height="40"/>
+                                <state key="normal" image="PulseButtonBG"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="TouraBotButtonAction:" destination="Lwq-AL-ey9" eventType="touchUpInside" id="cD7-7s-DEe"/>
                                 </connections>
@@ -123,6 +129,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="w3w-NT-u87"/>
                     <connections>
+                        <outlet property="touraChatButton" destination="5Ql-9S-RGu" id="o5b-jM-EL2"/>
                         <segue destination="Fix-iR-xEH" kind="show" identifier="TouraBot" id="kRc-3e-qAZ"/>
                     </connections>
                 </viewController>
@@ -150,6 +157,7 @@
         <image name="LaunchImage" width="375" height="667"/>
         <image name="LoginBTNBG" width="321" height="50"/>
         <image name="Logo" width="216" height="173"/>
+        <image name="PulseButtonBG" width="40" height="40"/>
         <image name="UserNameBG" width="323" height="27"/>
     </resources>
 </document>
