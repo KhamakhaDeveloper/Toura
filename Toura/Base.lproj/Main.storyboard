@@ -1,24 +1,156 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="HkT-zo-dD7">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="AvenirNext.ttc">
+            <string>AvenirNext-DemiBold</string>
+        </array>
+    </customFonts>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Navigation Controller-->
+        <scene sceneID="vNP-FC-I3w">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <navigationController id="HkT-zo-dD7" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="bPn-Qo-Bgw">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="5sI-A2-s2C" kind="relationship" relationship="rootViewController" id="qBJ-sx-sJi"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mpo-rn-wA8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1394" y="87"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="9QE-be-Aj2">
+            <objects>
+                <viewController id="5sI-A2-s2C" customClass="LoginViewController" customModule="Toura" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2xK-MI-CqJ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LaunchImage" translatesAutoresizingMaskIntoConstraints="NO" id="4lt-Y2-yCX">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="s6S-uU-VQn">
+                                <rect key="frame" x="79" y="247" width="216" height="173"/>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Your Name" textAlignment="center" minimumFontSize="17" disabledBackground="UserNameBG" translatesAutoresizingMaskIntoConstraints="NO" id="eVY-lJ-scF">
+                                <rect key="frame" x="19.5" y="464.5" width="335" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="jYR-VW-dZx"/>
+                                </constraints>
+                                <color key="textColor" red="0.4961223602" green="0.430344373" blue="0.1388673782" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="15"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="5sI-A2-s2C" id="BjL-QX-TCs"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hny-zB-gJo">
+                                <rect key="frame" x="20" y="538.5" width="335" height="50"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="17"/>
+                                <state key="normal" title="LOGIN" backgroundImage="LoginBTNBG">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="loginButtonTapped:" destination="5sI-A2-s2C" eventType="touchUpInside" id="BIZ-QU-hf0"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="eVY-lJ-scF" firstAttribute="top" secondItem="s6S-uU-VQn" secondAttribute="bottom" constant="44.5" id="0yB-gw-A8J"/>
+                            <constraint firstItem="4lt-Y2-yCX" firstAttribute="leading" secondItem="xMI-Wo-86H" secondAttribute="leading" id="6w2-iu-hRR"/>
+                            <constraint firstItem="xMI-Wo-86H" firstAttribute="trailing" secondItem="Hny-zB-gJo" secondAttribute="trailing" constant="20" id="GTN-mT-QOO"/>
+                            <constraint firstItem="s6S-uU-VQn" firstAttribute="centerX" secondItem="4lt-Y2-yCX" secondAttribute="centerX" id="J2d-Oo-iTN"/>
+                            <constraint firstItem="4lt-Y2-yCX" firstAttribute="top" secondItem="2xK-MI-CqJ" secondAttribute="top" id="LpV-GR-phW"/>
+                            <constraint firstItem="Hny-zB-gJo" firstAttribute="top" secondItem="eVY-lJ-scF" secondAttribute="bottom" constant="34" id="P3c-jk-M0r"/>
+                            <constraint firstItem="eVY-lJ-scF" firstAttribute="centerX" secondItem="4lt-Y2-yCX" secondAttribute="centerX" id="Zjx-EY-b9G"/>
+                            <constraint firstItem="Hny-zB-gJo" firstAttribute="leading" secondItem="xMI-Wo-86H" secondAttribute="leading" constant="20" id="bia-GH-G4b"/>
+                            <constraint firstItem="s6S-uU-VQn" firstAttribute="centerY" secondItem="4lt-Y2-yCX" secondAttribute="centerY" id="cnE-dh-8SY"/>
+                            <constraint firstItem="Hny-zB-gJo" firstAttribute="centerX" secondItem="eVY-lJ-scF" secondAttribute="centerX" id="f5O-Ev-NXc"/>
+                            <constraint firstItem="xMI-Wo-86H" firstAttribute="trailing" secondItem="4lt-Y2-yCX" secondAttribute="trailing" id="jbw-fv-p1P"/>
+                            <constraint firstItem="xMI-Wo-86H" firstAttribute="bottom" secondItem="4lt-Y2-yCX" secondAttribute="bottom" id="rcK-Fe-xxp"/>
+                            <constraint firstItem="eVY-lJ-scF" firstAttribute="width" secondItem="Hny-zB-gJo" secondAttribute="width" id="yIU-eU-z69"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="xMI-Wo-86H"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="yWg-cz-Xyv">
+                        <barButtonItem key="backBarButtonItem" title="Logout" id="NOQ-Ik-8hS"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="logoVerticalConstraint" destination="cnE-dh-8SY" id="a9l-pL-dFt"/>
+                        <outlet property="userNameTextField" destination="eVY-lJ-scF" id="IAs-wj-t3e"/>
+                        <segue destination="Lwq-AL-ey9" kind="show" identifier="MainView" id="U67-Tv-UVG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cqx-Im-u8d" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-554" y="87"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="hz4-Ee-KEq">
+            <objects>
+                <viewController id="Lwq-AL-ey9" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SZh-y0-XJk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Ql-9S-RGu">
+                                <rect key="frame" x="291" y="617" width="68" height="30"/>
+                                <state key="normal" title="Ask Toura"/>
+                                <connections>
+                                    <action selector="TouraBotButtonAction:" destination="Lwq-AL-ey9" eventType="touchUpInside" id="fbi-Ws-cks"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="qWv-uh-KQX" firstAttribute="bottom" secondItem="5Ql-9S-RGu" secondAttribute="bottom" constant="20" id="4a8-jT-xYi"/>
+                            <constraint firstItem="qWv-uh-KQX" firstAttribute="trailing" secondItem="5Ql-9S-RGu" secondAttribute="trailing" constant="16" id="LqN-TW-dyw"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="qWv-uh-KQX"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="w3w-NT-u87"/>
+                    <connections>
+                        <outlet property="touraChatButton" destination="5Ql-9S-RGu" id="iuI-UI-vx2"/>
+                        <segue destination="Fix-iR-xEH" kind="show" identifier="TouraBot" id="kRc-3e-qAZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1WC-bT-AwG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="303" y="87"/>
+        </scene>
+        <!--Toura View Controller-->
+        <scene sceneID="nLx-VG-FRK">
+            <objects>
+                <viewController id="Fix-iR-xEH" customClass="TouraViewController" customModule="Toura" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XUC-3n-p3g">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="hFe-Sn-7Kb"/>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OFb-YH-cEO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1079" y="84"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="LaunchImage" width="375" height="667"/>
+        <image name="LoginBTNBG" width="321" height="50"/>
+        <image name="Logo" width="216" height="173"/>
+        <image name="UserNameBG" width="323" height="27"/>
+    </resources>
 </document>
