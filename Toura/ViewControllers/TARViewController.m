@@ -73,8 +73,20 @@
 
 #pragma mark - AR Node Methods
 
-- (void)addImageNode {
+- (void)addImageNode:(ARImageTrackable *)imageTrackable {
+    // Initialise image node
+    ARImageNode *imageNode = [[ARImageNode alloc] initWithBundledFile:@"eyebrow.png"];
     
+    // Add image node to image trackable
+    [imageTrackable.world addChild:imageNode];
+    
+    // Image scale
+    float scale = (float)imageTrackable.width / imageNode.texture.width;
+    
+    [imageNode scaleByUniform:scale];
+    
+    // Hide image node
+    [imageNode setVisible:YES];
 }
 
 - (void)addModelNode:(ARImageTrackable *)imageTrackable isVisible:(BOOL )isVisible {
@@ -111,7 +123,23 @@
     }
 }
 
-- (void)addVideoNode:(ARImageTrackable *)imageTrackable {
+- (void)addVideoNode:(ARImageTrackable *)imageTrackable isVisible:(BOOL )isVisible {
+    
+    // Initialise video node
+    ARVideoNode *videoNode = [[ARVideoNode alloc] initWithBundledFile:@"hawaMahal.mp4"];
+    
+    if (isVisible) {
+        // Add video node to image trackable
+        [imageTrackable.world addChild:videoNode];
+        
+        // Video scale
+        float scale = (float)imageTrackable.width / videoNode.videoTexture.width ;
+        [videoNode scaleByUniform:scale];
+        
+        [videoNode setVisible:YES];
+    }else {
+        [imageTrackable.world removeChild:videoNode];
+    }
 }
 
 - (void)addSignConversionNode {
@@ -133,6 +161,10 @@
         [self showMarkerInfo:imageTrackable];
     }else if ([imageTrackable.name isEqualToString:@"fortModel"]){
         [self addModelNode:imageTrackable isVisible:YES];
+    }else if ([imageTrackable.name isEqualToString:@"hawaMahal"]){
+        [self addVideoNode:imageTrackable isVisible:YES];
+    }else if ([imageTrackable.name isEqualToString:@"uniMarker"]){
+        [self addImageNode:imageTrackable];
     }
 }
 
@@ -141,6 +173,8 @@
         [self showMarkerInfo:imageTrackable];
     }else if ([imageTrackable.name isEqualToString:@"fortModel"]){
         [self addModelNode:imageTrackable isVisible:NO];
+    }else if ([imageTrackable.name isEqualToString:@"hawaMahal"]){
+        [self addVideoNode:imageTrackable isVisible:NO];
     }
 }
 

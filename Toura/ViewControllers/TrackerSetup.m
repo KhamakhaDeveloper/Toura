@@ -55,11 +55,36 @@
     
     //3D Model Tracker
     [self setupFortModelTrackable];
+    
+    //Video Trackable
+    [self setupVideoTrackable];
+    
+    //Live Trackable
+    [self setupLiveTrackable];
 }
 
 - (void)setupFortModelTrackable {
-    //Setup Single Markers
     ARImageTrackable *fortModelTrackable = [[ARImageTrackable alloc] initWithImage:[UIImage imageNamed:@"fort.png"] name:@"fortModel"];
+    [imageTrackerManager addTrackable:fortModelTrackable];
+    
+    [fortModelTrackable allowRecoveryMode];
+    [fortModelTrackable addTrackingEventTarget:self action:@selector(trackerDetected:) forEvent:ARImageTrackableEventDetected];
+    [fortModelTrackable addTrackingEventTarget:self action:@selector(trackerLost:) forEvent:ARImageTrackableEventLost];
+}
+
+- (void)setupVideoTrackable {
+    //Setup Single Markers
+    ARImageTrackable *videoTrackable = [[ARImageTrackable alloc] initWithImage:[UIImage imageNamed:@"hawamahal.png"] name:@"hawamahal"];
+    [imageTrackerManager addTrackable:videoTrackable];
+    
+    [videoTrackable allowRecoveryMode];
+    [videoTrackable addTrackingEventTarget:self action:@selector(trackerDetected:) forEvent:ARImageTrackableEventDetected];
+    [videoTrackable addTrackingEventTarget:self action:@selector(trackerLost:) forEvent:ARImageTrackableEventLost];
+}
+
+- (void)setupLiveTrackable {
+    //Setup Single Markers
+    ARImageTrackable *fortModelTrackable = [[ARImageTrackable alloc] initWithImage:[UIImage imageNamed:@"uniMarker.JPG"] name:@"uniMarker"];
     [imageTrackerManager addTrackable:fortModelTrackable];
     
     [fortModelTrackable allowRecoveryMode];

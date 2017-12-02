@@ -32,6 +32,9 @@
 		FBD40EE11FD2BF80006BCE4C /* TARViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB1795FA1FD27199003E9BDD /* TARViewController.m */; };
 		FBD40EE21FD2BF87006BCE4C /* MarkerInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBD40ED61FD2A29C006BCE4C /* MarkerInfoViewController.m */; };
 		FBD40EE41FD2C29F006BCE4C /* texture.png in Resources */ = {isa = PBXBuildFile; fileRef = FBD40EE31FD2C29F006BCE4C /* texture.png */; };
+		FBD40EE61FD2CDB8006BCE4C /* hawaMahal.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = FBD40EE51FD2CDB3006BCE4C /* hawaMahal.mp4 */; };
+		FBD40EE81FD2CE9A006BCE4C /* hawamahal.png in Resources */ = {isa = PBXBuildFile; fileRef = FBD40EE71FD2CE9A006BCE4C /* hawamahal.png */; };
+		FBD40EEA1FD2D69C006BCE4C /* uniMarker.JPG in Resources */ = {isa = PBXBuildFile; fileRef = FBD40EE91FD2D69C006BCE4C /* uniMarker.JPG */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -71,6 +74,9 @@
 		FBD40EDB1FD2BE8D006BCE4C /* Castle.armodel */ = {isa = PBXFileReference; lastKnownFileType = file; path = Castle.armodel; sourceTree = "<group>"; };
 		FBD40EDD1FD2BEC6006BCE4C /* fort.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fort.png; sourceTree = "<group>"; };
 		FBD40EE31FD2C29F006BCE4C /* texture.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = texture.png; sourceTree = "<group>"; };
+		FBD40EE51FD2CDB3006BCE4C /* hawaMahal.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = hawaMahal.mp4; sourceTree = "<group>"; };
+		FBD40EE71FD2CE9A006BCE4C /* hawamahal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hawamahal.png; sourceTree = "<group>"; };
+		FBD40EE91FD2D69C006BCE4C /* uniMarker.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = uniMarker.JPG; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,6 +181,7 @@
 			isa = PBXGroup;
 			children = (
 				FBD40ECC1FD29206006BCE4C /* udaipur.KARMarker */,
+				FBD40EE51FD2CDB3006BCE4C /* hawaMahal.mp4 */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -187,6 +194,8 @@
 				FBD40ED21FD29FBD006BCE4C /* Overlay@3x.png */,
 				FBD40ED91FD2BE68006BCE4C /* fortTexture.png */,
 				FBD40EE31FD2C29F006BCE4C /* texture.png */,
+				FBD40EE71FD2CE9A006BCE4C /* hawamahal.png */,
+				FBD40EE91FD2D69C006BCE4C /* uniMarker.JPG */,
 				FBD40EDD1FD2BEC6006BCE4C /* fort.png */,
 				FBD40EDB1FD2BE8D006BCE4C /* Castle.armodel */,
 			);
@@ -255,10 +264,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FBD40EE61FD2CDB8006BCE4C /* hawaMahal.mp4 in Resources */,
 				FBD40EE41FD2C29F006BCE4C /* texture.png in Resources */,
 				3A21F6511FD2605B00D89F25 /* LaunchScreen.storyboard in Resources */,
 				FBD40ED31FD29FBD006BCE4C /* Overlay.png in Resources */,
+				FBD40EEA1FD2D69C006BCE4C /* uniMarker.JPG in Resources */,
 				FBD40ECD1FD29206006BCE4C /* udaipur.KARMarker in Resources */,
+				FBD40EE81FD2CE9A006BCE4C /* hawamahal.png in Resources */,
 				3A21F64E1FD2605B00D89F25 /* Assets.xcassets in Resources */,
 				3A21F64C1FD2605B00D89F25 /* Main.storyboard in Resources */,
 				FBD40ED41FD29FBD006BCE4C /* Overlay@2x.png in Resources */,
