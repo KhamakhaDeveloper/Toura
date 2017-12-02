@@ -8,6 +8,43 @@
 
 #import "TARViewController.h"
 
+@interface TARViewController () {
+    
+    float lastScale;
+    float lastPanX;
+}
+
+@property (nonatomic) ARModelNode *modelNode;
+@property (nonatomic) ARImageTrackable *markerTracable;
+
+@end
+
 @implementation TARViewController
+
+- (void)setupContent {
+    
+}
+
+#pragma mark - AR Node Methods
+
+- (void)addImageNode {
+    
+}
+
+- (void)addModelNode {
+    
+}
+
+- (void)addVideoNode {
+    
+}
+
+- (void)addSignConversionNode {
+    
+}
+
+- (void)addNavigationNode {
+    
+}
 
 @end

@@ -11,6 +11,4 @@
 
 @interface TARViewController : ARCameraViewController
 
-@property (nonatomic) ARModelNode *modelNode;
-
 @end
