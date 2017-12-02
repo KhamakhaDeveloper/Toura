@@ -23,12 +23,32 @@
 @end
 
 @implementation TARViewController
+@synthesize touraChatButton = _touraChatButton;
 
 - (void)setupContent {
     [self setupTracableMarkers];
-    [self setupGestureRecognizers];
+    
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self setupGestureRecognizers];
+        [self pulseEffect];
+    });
 }
 
+
+#pragma mark - Pulse Animation
+-(void)pulseEffect{
+    CABasicAnimation *theAnimation;
+    theAnimation=[CABasicAnimation animationWithKeyPath:@"transform.scale"];
+    theAnimation.duration=0.7;
+    theAnimation.repeatCount= 20;
+    theAnimation.autoreverses=YES;
+    theAnimation.fromValue=[NSNumber numberWithFloat:1.5];
+    theAnimation.toValue=[NSNumber numberWithFloat:0.7];
+    theAnimation.timingFunction=[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn];
+    self.touraChatButton.layer.cornerRadius = 20.0f;
+    self.touraChatButton.layer.masksToBounds = YES;
+    [self.touraChatButton.layer addAnimation:theAnimation forKey:@"animateOpacity"];
+}
 #pragma mark - Tracable Markers Method
 
 // Doing it using multiple markers .KARMarker set
@@ -40,16 +60,14 @@
 
 - (void)setupGestureRecognizers {
     // Add gesture recognisers.
-        dispatch_async(dispatch_get_main_queue(), ^{
-        UIPinchGestureRecognizer *pinchGesture = [[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(nodePinch:)];
-        [self.cameraView addGestureRecognizer:pinchGesture];
-        
-        UIPanGestureRecognizer *panGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(nodePan:)];
-        [self.cameraView addGestureRecognizer:panGesture];
-        
-        UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(nodeTap:)];
-        [self.cameraView addGestureRecognizer:tapGesture];
-    });
+    UIPinchGestureRecognizer *pinchGesture = [[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(nodePinch:)];
+    [self.cameraView addGestureRecognizer:pinchGesture];
+    
+    UIPanGestureRecognizer *panGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(nodePan:)];
+    [self.cameraView addGestureRecognizer:panGesture];
+    
+    UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(nodeTap:)];
+    [self.cameraView addGestureRecognizer:tapGesture];
 }
 
 

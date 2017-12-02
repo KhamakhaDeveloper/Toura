@@ -112,9 +112,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Ql-9S-RGu">
-                                <rect key="frame" x="291" y="617" width="68" height="30"/>
-                                <state key="normal" title="Ask Toura"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Ql-9S-RGu">
+                                <rect key="frame" x="319" y="607" width="40" height="40"/>
+                                <state key="normal" image="PulseButtonBG"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="TouraBotButtonAction:" destination="Lwq-AL-ey9" eventType="touchUpInside" id="cD7-7s-DEe"/>
                                 </connections>
@@ -129,6 +135,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="w3w-NT-u87"/>
                     <connections>
+                        <outlet property="touraChatButton" destination="5Ql-9S-RGu" id="Ynq-P9-gpU"/>
                         <segue destination="Fix-iR-xEH" kind="show" identifier="TouraBot" id="kRc-3e-qAZ"/>
                     </connections>
                 </viewController>
@@ -277,6 +284,7 @@
         <image name="LaunchImage" width="375" height="667"/>
         <image name="LoginBTNBG" width="321" height="50"/>
         <image name="Logo" width="216" height="173"/>
+        <image name="PulseButtonBG" width="40" height="40"/>
         <image name="UserNameBG" width="323" height="27"/>
         <image name="fort" width="1964" height="1430"/>
         <image name="fort.png" width="16" height="16"/>
