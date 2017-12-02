@@ -19,9 +19,9 @@
 @interface TrackerSetup : NSObject
 
 //properties
-@property(nonatomic) id<ImageTrackerDelegate>delegate;
+@property(nonatomic, weak) id<ImageTrackerDelegate>delegate;
 
 //Instance methods
-+ (void)sharedManager;
++ (id)sharedManager;
 
 @end

@@ -27,6 +27,7 @@
 		FBD40ED31FD29FBD006BCE4C /* Overlay.png in Resources */ = {isa = PBXBuildFile; fileRef = FBD40ED01FD29FBD006BCE4C /* Overlay.png */; };
 		FBD40ED41FD29FBD006BCE4C /* Overlay@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FBD40ED11FD29FBD006BCE4C /* Overlay@2x.png */; };
 		FBD40ED51FD29FBD006BCE4C /* Overlay@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = FBD40ED21FD29FBD006BCE4C /* Overlay@3x.png */; };
+		FBD40ED81FD2A29D006BCE4C /* MarkerInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBD40ED61FD2A29C006BCE4C /* MarkerInfoViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +61,8 @@
 		FBD40ED01FD29FBD006BCE4C /* Overlay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Overlay.png; sourceTree = "<group>"; };
 		FBD40ED11FD29FBD006BCE4C /* Overlay@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Overlay@2x.png"; sourceTree = "<group>"; };
 		FBD40ED21FD29FBD006BCE4C /* Overlay@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Overlay@3x.png"; sourceTree = "<group>"; };
+		FBD40ED61FD2A29C006BCE4C /* MarkerInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MarkerInfoViewController.m; sourceTree = "<group>"; };
+		FBD40ED71FD2A29C006BCE4C /* MarkerInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MarkerInfoViewController.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +155,8 @@
 			children = (
 				FB1795F91FD27199003E9BDD /* TARViewController.h */,
 				FB1795FA1FD27199003E9BDD /* TARViewController.m */,
+				FBD40ED71FD2A29C006BCE4C /* MarkerInfoViewController.h */,
+				FBD40ED61FD2A29C006BCE4C /* MarkerInfoViewController.m */,
 				FBD40EC81FD28D84006BCE4C /* TrackerSetup.h */,
 				FBD40EC91FD28D84006BCE4C /* TrackerSetup.m */,
 			);
@@ -310,6 +315,7 @@
 				3A21F6541FD2605B00D89F25 /* main.m in Sources */,
 				3A5FE5361FD27E74005079E8 /* LoginViewController.swift in Sources */,
 				3A5FE53B1FD28F39005079E8 /* PulseAnimation.swift in Sources */,
+				FBD40ED81FD2A29D006BCE4C /* MarkerInfoViewController.m in Sources */,
 				3A21F6461FD2605B00D89F25 /* AppDelegate.m in Sources */,
 				3A5FE53F1FD2911A005079E8 /* TouraViewController.swift in Sources */,
 				3A5FE53D1FD290CE005079E8 /* SimpleChat.swift in Sources */,

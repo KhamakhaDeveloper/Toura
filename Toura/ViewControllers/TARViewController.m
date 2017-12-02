@@ -8,6 +8,7 @@
 
 #import "TARViewController.h"
 #import "TrackerSetup.h"
+#import "MarkerInfoViewController.h"
 #import "Constants.h"
 
 @interface TARViewController ()<ImageTrackerDelegate> {
@@ -33,7 +34,8 @@
 // Doing it using multiple markers .KARMarker set
 
 - (void)setupTracableMarkers {
-    [TrackerSetup sharedManager];
+    TrackerSetup *l_TrackerSetup = [TrackerSetup sharedManager];
+    [l_TrackerSetup setDelegate:self];
 }
 
 - (void)setupGestureRecognizers {
@@ -81,6 +83,7 @@
 
 - (void)detectedTrackable:(ARImageTrackable *)imageTrackable {
     if ([imageTrackable.name isEqualToString:UDAIPUR_MARKER_NAME]) {
+        [self showMarkerInfo:imageTrackable];
     }
 }
 
@@ -126,6 +129,77 @@
 
 - (IBAction)TouraBotButtonAction:(id)sender {
     [self performSegueWithIdentifier:@"TouraBot" sender:nil];
+}
+
+//test
+
+- (void)showMarkerInfo:(ARImageTrackable *)imageTrackable {
+    
+    MarkerInfoViewController *markerInfo = [self.storyboard instantiateViewControllerWithIdentifier:@"MarkerInfoViewController"];
+    UIGraphicsBeginImageContextWithOptions(markerInfo.view.frame.size, markerInfo.view.opaque, 0.0);
+    [markerInfo.view.layer renderInContext:UIGraphicsGetCurrentContext()];
+    
+    UIImage *img = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    [self saveImage:img];
+    
+    // Initialise image node
+    ARImageNode *imageNode = [[ARImageNode alloc] initWithImage:[self getImage]];
+    
+    
+    // Add image node to image trackable
+    [imageTrackable.world addChild:imageNode];
+    
+    // Image scale
+    float scale = (float)imageTrackable.width / imageNode.texture.width;
+    [imageNode rotateByDegrees:25 axisX:1.0 y:0.0 z:0.0];
+    [imageNode scaleByUniform:1.0];
+    
+    // Hide image node
+    [imageNode setVisible:YES];
+    
+}
+
+- (void)saveImage:(UIImage *)_postImage {
+    // For error information
+    NSError *error;
+    NSFileManager *fileMgr = [NSFileManager defaultManager];
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectory = [paths objectAtIndex:0]; // Get documents folder
+    NSString *dataPath = [documentsDirectory stringByAppendingPathComponent:@"/YOUR_IMG_FOLDER"];
+    
+    if (![fileMgr fileExistsAtPath:dataPath])
+        [[NSFileManager defaultManager] createDirectoryAtPath:dataPath withIntermediateDirectories:NO attributes:nil error:&error]; //Create folder
+    
+    //    //Get the current date and time and set as image name
+    //    NSDate *now = [NSDate date];
+    //
+    //    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    //    dateFormatter.dateFormat = @"yyyy-MM-dd_HH-mm-ss";
+    //    [dateFormatter setTimeZone:[NSTimeZone systemTimeZone]];
+    //    NSString *gmtTime = [dateFormatter stringFromDate:now];
+    //    NSLog(@"The Current Time is :%@", gmtTime);
+    
+    NSData *imageData = UIImageJPEGRepresentation(_postImage, 0.5); // _postImage is your image file and you can use JPEG representation or PNG as your wish
+    int imgSize = imageData.length;
+    ////NSLog(@"SIZE OF IMAGE: %.2f Kb", (float)imgSize/1024);
+    
+    //NSString *imgfileName = [NSString stringWithFormat:@"%@%@", gmtTime, @".jpg"];
+    
+    NSString *imgfileName = [NSString stringWithFormat:@"markerInfo.jpg"];
+    
+    // File we want to create in the documents directory
+    NSString *imgfilePath= [dataPath stringByAppendingPathComponent:imgfileName];
+    // Write the file
+    [imageData writeToFile:imgfilePath atomically:YES];
+}
+
+- (UIImage *)getImage {
+    //Get image file from sand box using file name and file path
+    NSString *stringPath = [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)objectAtIndex:0]stringByAppendingPathComponent:@"YOUR_IMG_FOLDER"];
+    stringPath  = [stringPath stringByAppendingPathComponent:@"markerInfo.jpg"]; // imgFile to get from your array, where you saved those image file names
+    return [UIImage imageWithContentsOfFile:stringPath];
 }
 
 @end

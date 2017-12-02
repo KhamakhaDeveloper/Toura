@@ -15,12 +15,6 @@
 
 @implementation TrackerSetup
 
-- (id)init {
-    if (self = [super init]) {
-    }
-    return self;
-}
-
 + (id)sharedManager{
     static TrackerSetup *trackerSetup = nil;
     static dispatch_once_t onceToken;
