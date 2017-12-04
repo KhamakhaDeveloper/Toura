@@ -1,4 +1,5 @@
 # Toura - Transforming Tourism Digitally 
+Developed In : Rajasthan Hackathon 3.0
 
 - Accelerating tourists experience like never before using AR/VR and AI.
 - Introducing Crowd Sensing tech to radically change Rajasthan’s hospitality.
